@@ -1,146 +1,82 @@
-// Question 25
-// let alien_color:string = "green";
-// if(alien_color=="green"){
-//     console.log("The player just earned 5 points.")
-// }
+// Question 22
+let city:string[] = ["Jhang","Karachi","Lahore","Faisalabad"];
+// console.log(city{4});
+console.log(city[3]);
 
-let alien_color:string = "red";
-if(alien_color=="green"){
-    console.log("The player just earned 5 points.")
-}
+// Question 23
+let car = 'subaru';
+console.log("Is car =='subaru'?I predict True.")
+console.log(car =='subaru');
 
-// Question 26
-// We use alien_color variable from question 25
-if(alien_color=="green"){
-    console.log("The player just earned 5 points.")
+console.log("Is car !='hondaa'?I predict True.")
+console.log(car !='hondaa');
+
+console.log("Is car >='hondaa'?I predict True.")
+console.log(car >='hondaa');
+
+console.log("Is car <='urabus'?I predict True.")
+console.log(car <='urabus');
+
+console.log("Is car ==='subaru'?I predict True.")
+console.log(car ==='subaru');
+
+console.log("Is car =='hondaa'?I predict False.")
+console.log(car =='hondaa');
+
+console.log("Is car <'hondaa city'?I predict False.")
+console.log(car <'hondaa');
+
+console.log("Is car <='hondaa'?I predict False.")
+console.log(car <='hondaa');
+
+console.log("Is car >='urabus'?I predict False.")
+console.log(car >='urabus');
+
+console.log("Is car !='subaru'?I predict False.")
+console.log(car !='subaru');
+
+// Question 24
+// Test for equality and inequality with string
+let name:string = "Maham";
+console.log("Test for equality",name=="Maham");
+console.log("Test for inequality",name=="maham");
+// Test using the lower case function
+if(name=="maham"){
+    console.log("Name is equal.");
 }else{
-    console.log("The player just earned 10 points.");
+    console.log("Name is not equal.");
 }
 
-// Question 27
-if(alien_color=="green"){
-    console.log("The player just earned 5 points.")
-}else if(alien_color=="yellow"){
-    console.log("The player just earned 10 points.");
-}else if(alien_color=="red"){
-    console.log("The player just earned 15 points.");
-}
+// Numerical testing
+let age1:number = 15;
+let age2:number = 19;
 
-// Question 28
-
-let age:number = 66;
-if(age<2){
-    console.log("The person is a baby.");
-}else if(age>=2 && age<4){
-    console.log("The person is a toddler.");
-}else if(age>=4 && age<13){
-    console.log("The person is a kid.");
-}else if(age>=13 && age<20){
-    console.log("The person is a teenager.");
-}else if(age>=20 && age<65){
-    console.log("The person is an adult.");
+if(age1>age2){
+    console.log(`${age1} is greater than ${age2}`)
 }else{
-    console.log("The person is an elder.");
+    console.log(`${age1} is less than ${age2}`)
 }
 
-// Question 29
-
-let favoruite_fruit:string[] = ["Mango","Orange","Kewi"]
-if(favoruite_fruit[1]=="Orange"){
-    console.log("You really like Orange.");
-}
-if(favoruite_fruit[2]=="orange"){
-    console.log("You really like Orange.");
-}
-
-if(favoruite_fruit[0]=="Mango"){
-    console.log("You really like Mango.");
-}
-
-if(favoruite_fruit.includes("Apple")){
-    console.log("You really like Apple.");
-}
-
-if(favoruite_fruit.includes("Kewi")){
-    console.log("You really like Kewi.");
-}
-
-// Question 30
-
-let username:string[] = ["Maham","Sabar","admin","Taimoor","Daniyal"];
-for(let i =0;i<username.length;i++){
-    if(username[i]=="admin"){
-        console.log("Hello admin,would you like to see a status report?");
-    }else{
-        console.log(`Hello ${username[i]},thank you for logging in again.`);
-    }
-}
-
-// Question 31
-
-if(username.length==0){
-    console.log("We need to find some user.");
+if(age1<=age2){
+    console.log(`${age1} is less than or equal to ${age2}`)
 }else{
-    for(let i =0;i<username.length;i++){
-        if(username[i]=="admin"){
-            console.log("Hello admin,would you like to see a status report?");
-        }else{
-            console.log(`Hello ${username[i]},thank you for logging in again.`);
-        }
+    console.log(`${age1} is greater than or equal to ${age2}`)
+}
+
+if(age1==15&&age2==19){
+    console.log("Result is true in and operator.")
+}
+if(age1<=17||age2==15){
+    console.log("Result is true in or operator.")
+}
+
+let days:string[] = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+for(let i =0;i<days.length;i++){
+    if(days[i]=="Friday"){
+        console.log("Day is found in week.");
     }
 }
 
-username = [];
-if(username.length == 0){
-    console.log("We need to find some user.");
+if(days[2]!="Maham"){
+    console.log("Day is not found in week.");
 }
-
-// Qusetion 32
-let current_user:string[] = ["Maham", "Sabar", "admin", "Taimoor", "Daniyal"];
-let new_user:string[] = ["maham","sabar","Daniyal","Taimoor","Jabbar"];
-
-let current_user_upper:string[] = current_user.map(user=>user.toUpperCase());
-for(let newuser of new_user){
-    if(current_user_upper.includes(newuser.toUpperCase())){
-        console.log(`${newuser} is already taken`);
-    }else{
-        console.log(`${newuser} is now available in the list.`);
-    }
-}
-
-// Question 33
-let ordinal:number[] = [1,2,3,4,5,6,7,8,9];
-for(let num =0;num<ordinal.length;num++){
-    if(ordinal[num]===1){
-        console.log(`${ordinal[num]}st`);
-    }else if(ordinal[num]===2){
-        console.log(`${ordinal[num]}nd`);
-    }else if(ordinal[num]===3){
-        console.log(`${ordinal[num]}rd`);
-    }else{
-        console.log(`${ordinal[num]}th`);
-    }
-}
-
-// Question 34
-let pizza:string[] = ["Kabab krust","Chicken Tikka","Fajita"];
-for(let i =0;i<pizza.length;i++){
-    console.log(pizza[i]);
-}
-
-for(let i =0;i<pizza.length;i++){
-    console.log(`I like ${pizza[i]} pizza`);
-}
-
-console.log("Pizza is an Italian food that was created in Italy (The Naples area). It is made with different toppings. ");
-
-// Question 35
-let animal:string[] = ["lion","tiger","elephant"];
-for(let pet of animal){
-    console.log(pet);
-}
-for(let pet of animal){
-    console.log(`A ${pet} would make a great pet.`);
-}
-
-console.log("All of these animals eat meat and I like tiger.");
